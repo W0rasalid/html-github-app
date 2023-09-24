@@ -1,5 +1,8 @@
 name: GitHub Action Demo
 # on: [push]
+
+env:
+  MY_NAME: "Worasalid"
 on:
   push:
     branches:
@@ -17,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, world!"
-      - run: echo "Hello, world 2!"
+      - run: echo ${{ env.MY_NAME }}}
 
   test-job:
     runs-on: ubuntu-latest
